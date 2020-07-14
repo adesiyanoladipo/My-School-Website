@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+   <!-- Title -->
+{% block title %}Login to your e-portal{% endblock %}
+<!--- Title ends -->
+{% block body %}
+    <div class="jumbotron">
+        
+  <center>
+<h1><p>Welcome back!</h1>  <p>
+           
+ <h3><p>Login to view your student's e-portal</p></h3>
+
+ <div class="textbox">
+ <i class="fas fa-users"></i>
+       <form method="POST">  <p>
+   <input type="text" style="
+   outline: hidden;" required align="center" name="username"  placeholder=" Enter your username." /><br />  </div>
+
+ <div class="textbox">
+  
+ <i class="fas fa-lock"></i>  
+   <input type="password" required align="center" name="password" placeholder="                ********" /></p>
+       </div>  
+   
+ {% csrf_token %}
+     <center>    <input style="background-color: green;" type="submit" value="Login" class="btn btn-primary"/> </center>    
+       <br>
+     <h5>Don't have an account? <a href="{% url 'register' %}">Sign up</a></h5>   
+     <br>
+     <h5>Forgot password? Click <a href="{% url 'reset_password' %}">here</a> to reset it</h5>                
+                     {% if form.errors %}
+                     <hr/>
+               
+               <div class="alert alert-danger" role="alert" style="color:rgb(255,255,255);">Your username and password didn't match.</div>               
+           {% endif %}     
+
+       </center>
+</form>  
+
+    {% endblock %}

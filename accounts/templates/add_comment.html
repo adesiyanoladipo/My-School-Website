@@ -1,0 +1,45 @@
+ {% extends 'base2.html' %} {% block content %}
+<head>
+     {% load static %}
+<link rel="stylesheet" href="{% static 'accounts/paste.css' %}"type="text/css">
+
+
+       <title>{{ post.Your_Post_title }}</title>
+             </head>
+                     <header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+               <div class="site-heading">
+                    <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to Messiah High School news section </h3>
+                    <p class="text-light">We give you the latest news
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+    <form method="POST"
+     {% csrf_token %}
+    <table>
+
+        {{ form.as_table }}
+
+    </table> 
+    <center><input type="submit" value="Comment" 
+                       class="btn btn-primary" /> </center> 
+</form>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

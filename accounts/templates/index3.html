@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+{% block body %}
+
+<h1>School news</h1>
+        <!-- Blog Entries Column -->
+    
+
+{% for post in latest_post_list %}
+<div class="container">
+
+        <div class="row">
+           <div class="col-md-8 mt-3 left">
+   
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.Your_Post_title }}</h2>
+                    <p class="card-text text-muted h6">{{ post.pub_date}} </p>
+                                <p class="card-text">{{ post.Your_Post|slice:":56" }}...</p>
+
+
+   
+         {% if post.image %}
+          
+          <p> <img src="{{ post.image.url }}" style="
+  width: 100% ;
+  max-width: 100% ;
+"> </p>
+
+                                 {% else %}
+
+                                {% endif %}
+
+                                
+                    <a href="/posts/{{ post.id }}" style="background-color: green;" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+{% endblock %}

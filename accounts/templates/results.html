@@ -1,0 +1,37 @@
+{% extends "base.html" %} 
+{% block title %}Your result{% endblock %}
+{% block body %}
+
+</center>
+<div class="container">
+ <h2>Student name: {{ user.profile.name }}</h2>
+  <h3>Class: {{ user.profile.Class }}</h3>
+   <h3>Total number in class: {{ user.profile.Total_number_in_class }}</h3>
+        <h3>Number of time present and absent in school: {{user.profile.Number_of_time_present_and_absent_in_school }}</h3>
+        
+        
+        
+        
+     <h4>Results For Senior students </h4> 
+        <h5>       Mathematics: {{ user.result.Mathematics }}</h5>
+        <h5>   English Language : {{user.result.English_language }}</h5>
+          <h5>     CRK : {{user.result.CRK}}</h5>
+            <h5> Physics or Office practice : {{user.result.Physics_or_Office_practice}}</h5>
+    <h5> Chemistry or Insurance : {{user.result.Chemistry_or_Insurance}}</h5>
+    <h5> Biology : {{user.result.Biology}}</h5>
+    <h5> Agric Science : {{user.result.Agriculture_Science}}</h5>
+      <h5> Commerce : {{user.result.Commerce}}</h5>
+    <h5>  Account : {{user.result.Account}}</h5>
+    <h5>  Government : {{user.result.Government}}</h5>
+    <h5>  Geography : {{user.result.Geography}}</h5>
+    <h5>ICT : {{user.result.Computer_Science}}</h5>
+    <h5> Literature In English : {{user.result.Literature_In_English}}</h5>
+    <h5>Further Mathematics : {{user.result.Further_Mathematics}}</h5>
+<h5>Photography : {{user.result.Photography}}</h5>
+<h5>Dyeing and Bleaching : {{user.result.Dyeing_and_Bleaching}}</h5>
+<h5>Clothing and Textile : {{user.result.Clothing_and_Textile}}</h5>
+<h5>Food and Nutrition : {{user.result.Food_and_Nutrition}}</h5>
+<h5>Animal Husbandry : {{user.result.Animal_Husbandry}}</h5>
+<h5>Civic Education : {{user.result.Civic_Education}}</h5>
+</div>
+{% endblock %}

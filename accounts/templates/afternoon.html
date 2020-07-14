@@ -1,0 +1,929 @@
+<html lang="en">
+<head>
+{% load staticfiles %}
+
+    <link rel="stylesheet" href="{% static 'accounts/home.css' %}">
+<link rel="icon" href="https://scontent.flos1-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/104170236_972947339843292_4321572288482582077_n.jpg?_nc_cat=108&_nc_sid=110474&efg=eyJpIjoiYiJ9&_nc_eui2=AeEcjp7UXACUMUNKCyAFdMS6uHBKf3iA0Ei4cEp_eIDQSN4T1NZVbEALJjv2w2hVV3gIPSSzQsz1Ff83hlKvJkpq&_nc_ohc=7vAzYx_41I4AX9PGBMt&_nc_ht=scontent.flos1-1.fna&_nc_tp=14&oh=ead33ef7e5da117b35efd2f57435c861&oe=5F0A2A84">
+ 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+<title> Messiah High School | HOMEPAGE </title>
+
+        <style>
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+body {
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+}
+
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+.head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+        .shadow {
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #f00000;
+            border-color: #dc281e;
+        }
+        .masthead {
+            background: #3398E1;
+            height: auto;
+            padding-bottom: 15px;
+            box-shadow: 0 16px 48px #E3E7EB;
+            padding-top: 10px;
+        }
+
+
+
+   
+  
+ 
+
+footer {
+  background-color: #000;
+  background-position: absolute;
+  background-width: 100%;
+}
+
+
+.nav {
+    z-index: 9999;
+    width: 100%;
+    height: 100px;   
+    line-height: 65px;
+    text-align: center;
+    background-color: #2E8B57;
+}
+
+
+
+
+.nav div.main_list ul {
+    align-items: center;
+    z-index: 9999;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav div.main_list ul li {
+    z-index: 9999;
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-left: 5rem;
+    background-height: 300px; 
+   background-color: #2E8B57; 
+}
+
+
+
+.nav div.main_list ul li a {
+    align-items: center;
+    z-index: 9999;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    line-height: 65px;
+    font-size: 2.4rem;
+
+}
+
+.nav div.main_list ul li a:hover {
+    z-index: 9999;
+    color: #00E676;
+}
+
+
+/* Home section */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(static/accounts/photo-1498550744921-75f79806b8a7.jpg);
+    background-position: center top;
+    background-size:cover;
+}
+
+.navTrigger {
+    display: flex;
+}
+
+.nav {
+    z-index: 9999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        z-index: 9999;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+        z-index: 9999;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+        z-index: 9999;
+    }
+    .nav div.main_list {
+        z-index: 9999;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        z-index: 9999;
+        height: auto;
+        display: none;
+        line-height: 20px;
+    }
+    .nav div.main_list ul {
+        z-index: 9999;
+        flex-direction: column;
+        width: 100%;
+        height: 50vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+        
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+        line-height: 20px;
+        z-index: 9999;
+        
+    }
+    .nav div.main_list ul li a {
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 10px;
+        z-index: 9999;
+    }
+    .nav div.media_button {
+        display: block;
+        z-index: 9999;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    buttom: 10px;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+
+.myH2 {
+    text-align:center;
+    font-size: 10px;
+    text-color: white;
+}
+
+.myP {
+   
+    padding-top:15%;
+   
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+
+.btn {
+    width: 280px;
+    background: none;
+     color: green;
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 12px 0;
+
+
+ }
+
+.centered {
+
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
+
+.centere {
+
+
+text-align: center;
+    padding-top: 100px; 
+    font-size: 50px;
+    text-color: white;
+
+
+
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+[data-component="slideshow"] .slide {
+    display: none;
+  text-align: center;
+}
+
+[data-component="slideshow"] .slide.active {
+    display: block;
+}
+
+
+.myPa {
+    text-align: center;
+    padding-right:15%;
+    font-size: 30px;
+    text-color: white;
+}
+
+.myP4 {
+    font-size: 20px;
+    text-color: white;
+
+
+
+
+@media all and (max-width:700px){
+    .myP {
+        padding:2%;
+    }
+}
+</style>
+</head>
+
+
+
+<td><img src="https://i.imgur.com/01QeTu8.jpg" style="
+  width: 130px;
+  height: 80px ;
+  padding-left: 20px">    &nbsp;
+<span style="text-shadow: 2px 2px 2px #CCCCCC; text-align:left; padding-left:0px; padding-right: 10px; padding-top:1%; font-size:30px; color: #000000; font-weight:bold; font-family:Trebuchet MS Candara, sans-serif, Geneva, Arial, Helvetica">Messiah High School<br/>
+</span>
+<span style="text-shadow: 2px 2px 2px #CCCCCC; font-style: italic; text-align:left; padding-left: 10px; font-size: 20px; color: 000000; font-weight:bold; font-family: Georgia, Times, serif;">...christ our source of wisdom</span>
+
+</td>
+
+<nav class="nav">
+
+<div class="container">
+<div id="mainListDiv" class="main_list">
+<ul class="navlinks">
+<li><a href="accounts">Students</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="posts">News</a></li>
+
+</ul>
+ </div>
+<span class="navTrigger">
+<i></i>
+<i></i>
+<i></i>
+</span>
+</div>
+</nav>
+<center>
+
+
+
+
+<div class="bad">
+  <img src="http://1.bp.blogspot.com/-yKnxLvLcwyQ/VCqbqXPapdI/AAAAAAAAACA/w5lXC2Pj3p8/s1600/3.jpg" alt="Snow" style="
+  width: 100% ;
+  max-width: 100% ;
+  height: 60% ;">
+ <strong> <bold> <div class="centered"> <p class="myP" style="color:rgb(255,255,255); 
+                                                        text-align: center;
+                                                        
+                                                        font-size: 45px;">  Welcome to Messiah High School   </p>
+
+
+
+
+<p style="color:rgb(255,255,255); 
+                                                        text-align: center;
+                                                        
+                                                        font-size: 28px;"> Good afternoon</p>
+
+
+
+
+                                                    </bold></strong>
+<a class="btn" style="color:rgb(255,255,255); background-color: green;" href="#au">About us</a>
+
+                                                    </div>
+
+</div>
+
+
+
+
+<h3>MISSION STATEMENT</h3>
+
+Our mission is to create an enabling student-centered class environment where all students feel comfortable and safe enough to have freedom of expression , supported and bold enough for critical inquiry and confidently strong enough to strive for excellence in all endeavors , so that they can become useful citizens in a 21st century society
+
+
+        <h3>Vision Statement</h3>
+
+        We are focused in ensuring that every child attains his full potential and occupies a leadership position in the society through our meticulously planned pedagogical action and personal interaction</p>   
+        </center>
+
+        <div id="au">          
+<h3 style="padding-left: 50px">About us - From the principal's desk</h3>   
+
+<h4 style="padding-left: 180px">Stella Ajibola</h4>
+
+
+        <p style="
+        padding-left: 50px">
+        
+        Messiah High School was established on the 15th of September 1995. 
+</p>
+
+
+    <img src="https://i2.wp.com/www.thehopenewspaper.com/wp-content/uploads/2018/11/Entertainment.jpg?w=524&ssl=1" style="padding-buttom:100px" width="60%" height="70%" align="right">
+
+
+<br>
+<p style="padding-left: 50px">The school was founded by Pastor J. Adelola, a veteran
+
+
+<p style="padding-left: 50px">educationist with over four decades’ experience in school administration.   
+</p>
+
+
+
+
+
+       <p style="padding-left: 50px">
+    <br>
+        The aims and objectives of the school are to produce total students who are academically sound, morally upright and also nurture them spiritual by catching them young for our Lord Jesus Christ, providing a balanced and comprehensive programme of extra curriculum activities and maintaining close communication with the parents and guardians.
+        </p>
+        <p style="padding-left: 50px">
+        <br>
+        The school is located in a serene environment. This provides the right environment for our students’ academic, social, moral and intellectual development during the critical years of their programme.
+        </p>
+        <br>
+    </div>
+</div>
+
+
+
+<center>        </p>
+        <h2>  Counseling Services</h2>
+        <p>
+        
+        To facilitate settling down into the school system and coping with the demands of a new environment, the school counselors are on ground to organize orientation programmes for in-coming (new) students; they also give advice to all students on choice of carrier, selection of relevant subjects for each chosen field of study and other emotional needs at all level to students.</h3>
+        </p>
+        
+        <h2>     Teacher Parenting Scheme</h2>
+        <p>
+        
+        Each student is assigned a personal tutor who acts as a mentor, monitoring progress, providing support when needed and keeping parents/guardians informed about matters concerning the students’ welfare and academic works.  
+        
+        </h3>
+        </p>
+        
+        
+        
+                             
+         <h4>Messiah High School,Akure is a school that offers world class education,we are noted to be the best school in Akure</h4>
+         <p>
+                                 
+                                                               
+       <h2> Check result</h2>
+       <img style="
+width: auto ;
+  max-width: 100% ;
+  height: auto ;" src="https://i.imgur.com/Nxrmmwi.jpg"
+
+  
+  
+        width='150px' height="150px" >Click      <a href="http://localhost:8000/accounts/profile">here</a></li> to check your result online
+   
+  <h2> Check Payment</h2>
+        
+        <img style="
+width: auto ;
+  max-width: 100% ;
+  height: auto ;" src="https://i.imgur.com/0XqfqQb.jpg">Click      <a href="http://localhost:8000/accounts/profile">here</a></li> to check your Payment Record Online
+
+        <!--Students can check news here-->
+
+<h2>School news</h2>
+        <p>        Click    <a href="http://localhost:8000/posts">here </a></li> to check school news</p>  
+          
+       
+      
+
+<center><h1><p>Important Information</p></h1></center>
+<center>  <h3><p>Admission is on for 2019/2020 academic session,admission is on into the following classes; JSS1,JSS2,JSS3,SS1,SS2 only. Forms can be obtained at the school premises</p></h3></center>
+
+  
+         {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+          
+        
+
+<h2>Latest School News</h2>
+
+{% for post in latest_post_list %}
+<div class="container">
+        <div class="row">
+           <div class="col-md-8 mt-3 left">
+   
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.Your_Post_title }}</h2>
+                    <p class="card-text text-muted h6">{{ post.pub_date}} </p>
+                                <p class="card-text">{{ post.Your_Post|slice:":56" }}...</p>
+
+
+   
+         {% if post.image %}
+          
+          <p> <img src="{{ post.image.url }}" style="
+  width: 100% ;
+  max-width: 100% ;
+"> </p>
+
+                                 {% else %}
+
+                                {% endif %}
+
+                                
+                    <a href="/posts/{{ post.id }}" style="background-color: green;" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+           <center><h1><p>Facilities in school and learning benfits</p></h1></center>
+           
+       
+<h2>Highly Ventilated Classrooms</h2>
+       <br>    <center>  <h3><img src="http://1.bp.blogspot.com/-yKnxLvLcwyQ/VCqbqXPapdI/AAAAAAAAACA/w5lXC2Pj3p8/s1600/3.jpg" alt="Snow" style="
+  width: 80% ;
+  max-width: 100% ;
+  height: 80% ;"></p></h3></center><br>
+
+
+         <br>  <center>  <h3><p >
+              State of art facilities(one student, one computer)</h4><img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;" src="http://4.bp.blogspot.com/-pD5eHbdzMdE/VCqb_by6vPI/AAAAAAAAACg/LvY8rerYCio/s1600/8.jpg" >   
+           </p></h3></center><br>
+
+         <br>  <center>  <h3>
+              A well-stocked library</h4><img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;"src="http://1.bp.blogspot.com/-i7OQ_9AAzMk/VCqbymrH2yI/AAAAAAAAACI/rIm8pya3tZA/s1600/4.jpg">            
+            </p></h3></center><br>
+
+         <br>   <center>  <h3><p>    Condusive Boarding Facillites</h4><img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;" src="http://3.bp.blogspot.com/-2zYrARrUFIM/VCqcLS5yMJI/AAAAAAAAACw/hZY3toj-gtI/s1600/10.jpg" > </p></h3></center><br>
+           
+           
+           <br>   <center>  <h3><p style="
+width: auto ;
+  max-width: 100% ;
+  height: auto ;">    An Ultra-modern Laboratory,well equiupped for science students</h4><img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;"  src="http://1.bp.blogspot.com/-4VW39xn0eb4/VCqb1jRoG4I/AAAAAAAAACQ/e2h_BxA-ZEw/s1600/5.jpg" > </p></h3></center><br>
+           
+           <div class="container">
+           
+<br>
+<h2>Geographical</h2><p><br>Messiah High School is a secondary school in Nigeria, situated in one of the city's most beautiful areas,<br> 
+  <br>located at 1 Messiah Avenue, Off Onyearugbulem Market Road, P.O.Box 2045 Akure,Ondo State.It offers easy access to the Ondo State capital's myriad of cultural attractions.<br>
+  <br>It is a safe, clean and a quiet residential and commercial area of Akure.We offer both National and International Examination for our students.</p>
+</div>
+<br>
+
+   </div>
+
+<div id="gallery">
+<h2>Gallery</h2>
+
+    <div id="slideshow-example" data-component="slideshow">
+        <div role="list">
+            <div class="slide">
+                <img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;" src="http://1.bp.blogspot.com/-yKnxLvLcwyQ/VCqbqXPapdI/AAAAAAAAACA/w5lXC2Pj3p8/s1600/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;" src="http://4.bp.blogspot.com/-pD5eHbdzMdE/VCqb_by6vPI/AAAAAAAAACg/LvY8rerYCio/s1600/8.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;" src="http://4.bp.blogspot.com/-pD5eHbdzMdE/VCqb_by6vPI/AAAAAAAAACg/LvY8rerYCio/s1600/8.jpg" width="300">
+            </div>
+
+
+            <div class="slide">
+                <img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;" src="http://3.bp.blogspot.com/-2zYrARrUFIM/VCqcLS5yMJI/AAAAAAAAACw/hZY3toj-gtI/s1600/10.jpg" width="300">
+            </div>
+
+             <div class="slide">
+                <img style="
+width: 80% ;
+  max-width: 100% ;
+  height: 80% ;" src="http://1.bp.blogspot.com/-4VW39xn0eb4/VCqb1jRoG4I/AAAAAAAAACQ/e2h_BxA-ZEw/s1600/5.jpg" width="300">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="contact">
+<center> <container>
+  
+  <strong> <bold>  <p style="
+
+  text-align: center;
+font-size: 45px;"> 
+ Send us a message   </p></bold></strong>
+<form  method="post">   
+                {% csrf_token %}
+          {{ form.as_p }}
+ <center>   <input style="background-color: green;" type="submit" value="Send message" class="btn btn-primary"/> </center>      
+                            </form> 
+                         
+</div>
+   </container>  </center>
+
+
+<footer>
+
+    <br><p ><h4 style="color:rgb(255, 255, 255);">Contact Us</h4></p><br>
+  
+  <center>
+    <br><p><img style="
+width: auto ;
+  max-width: 100% ;
+  height: auto ;" src="https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yg/r/XGVo4SUb80w.png?_nc_x=vvRYAOalQvm&amp;_nc_eui2=AeGXxOaZVhnmd3lbhHbcPvKDupbOe9P1vqHYulTEBnNcCU3AdrqbrN3BzjGUD6REfomMbZgRt998JoJJ_DB97RQwos5OHNw3TV-nJLcPvbaCbA" width="20px" height="20px" >  08035520924, 07054546477</p><br>
+
+    <br><img style="
+width: auto ;
+  max-width: 100% ;
+  height: auto ;" src="https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yn/r/zw5k6aZ_4Ik.png?_nc_x=vvRYAOalQvm&_nc_eui2=AeG8_a97qlNE2pqG9Oo4Vpk_JaKcqzc-4V4hrTe2zH1TkU2whfc_1M7uU-99nK5mxl5yofv5BjthxBQQiliVfSR9JaayHWdinTCwCTl4FBpTow" width="20px" height="20px" > 
+  E-Mail: messiahhighschool@yahoo.com,
+  
+  </p>
+  <br><br>
+<img style="
+width: auto ;
+  max-width: 100% ;
+  height: auto ;" src="https://z-m-static.xx.fbcdn.net/rsrc.php/v3/y5/r/8owpMTW3fGr.png?_nc_x=vvRYAOalQvm&_nc_eui2=AeGjBA268s3SY_270hhUusJSv8dIk_HIO3SRsRxf7SMT_SSJnnmm-2eax2yJidPxnjAns8-P2cyTlS0hRXy35N1-y4dz_XYdxHwaTd5bQdRibw" width="20px" height="20px" >  Messiah High School is located at 1 Messiah Avenue, Off Onyearugbulem Market Road, P.O.Box 2045 Akure,Ondo State
+       </p>
+       <br>
+  
+  <p ><h4 style="color:rgb(255,255,255);">SOCIAL LINKS</h4></p>
+  
+  <br> <p><a class="navbar-brand" href="https://m.facebook.com/Messiah-High-School-Akure-378074116130659">   <img style="
+width: auto ;
+  max-width: 100% ;
+  height: auto ;" src="https://z-m-static.xx.fbcdn.net/rsrc.php/v3/yC/r/hwCZEAcHQnm.png?_nc_x=vvRYAOalQvm&amp;_nc_eui2=AeE25IRfs6ugdaF_mNMk2oL5wzB7LgrhBWwsU_-ZVGyD-WdwK2j7rLxz1WVOYh8gvFHPjI3txVd4qSicGQlXDniawImqLD-pjEakea3BfgrPpg" width="20px" height="20px" >  </a>Facebook </p><br>
+
+
+  <br> <p><a class="navbar-brand" href="https://m.facebook.com/Messiah-High-School-Akure-378074116130659">   <img style="
+width: 20px ;
+  height: 20px ;" src="https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png?_nc_x=Ij3Wp8lg5Kz" width="20px" height="20px" >  </a>Whatsapp </p><br>
+
+  <center><h3 style="color:rgb(255,255,255);" >©2020 Messiah High School | Powered by Adesiyan Oladipo</h3></center>
+
+  </footer>
+     
+    </div><!-- /.container -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script id="rendered-js">
+$('.navTrigger').click(function () {
+  $(this).toggleClass('active');
+  console.log("Clicked menu");
+  $("#mainListDiv").toggleClass("show_list");
+  $("#mainListDiv").fadeIn();
+
+});
+//# sourceURL=pen.js
+    </script>
+
+<script type="text/javascript">
+    
+var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+slideshows.forEach(initSlideShow);
+
+function initSlideShow(slideshow) {
+
+    var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
+
+    var index = 0, time = 3000;
+    slides[index].classList.add('active');
+
+    setInterval( () => {
+        slides[index].classList.remove('active');
+        
+        index++;
+        if (index === slides.length) index = 0;
+
+        slides[index].classList.add('active');
+
+    }, time);
+}
+
+</script>
+<script src="/static/js/jquery.min.js" type="text/javascript"></script>
+<script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

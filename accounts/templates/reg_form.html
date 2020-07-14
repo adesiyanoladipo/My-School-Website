@@ -1,0 +1,38 @@
+{% extends "base.html" %} 
+{% block title %}Registration Page{% endblock %}
+{% block body %}
+
+{% if user.is_authenticated %}
+
+   <title>Login to continue</title>
+           You can't access register since you are logged in,click  <a href="http://localhost:8000/profile/logout"> here</a> to logout.
+               
+{% else %}
+        
+        
+         <h2>Sign-up for your e-portal</h2>
+       <h3>Basic Info</h3>
+   <form action="register/" method="post">
+        </center>
+{% csrf_token %}
+<div class="ada" align="left" style="padding-left: 35px;">
+    {{ form.as_p}}
+    <p>
+<br>
+<h3>Student's Info</h3>
+    {{ form2.as_p}}
+  <input style="background-color: green;" type="submit" value="Signup" class="btn btn-primary"/> </center>      
+                       <p>
+                     <p> 
+         or 
+        <a href="url{% 'login' %}/">Already have an account? </a>         {% if form.errors %}
+                    <div class="alert alert-danger" role="alert"><h3>Please check your details and correct them</h3></div>           
+  
+                {% endif %}                  
+</form>
+</div>
+{% endif %}
+  
+
+{% endblock %}
+   

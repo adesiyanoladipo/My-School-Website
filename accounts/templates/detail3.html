@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>      <h3>{{ post.Your_Post_title }}</h3>
+</h1>
+        <p>{{ post.Your_Post }}</p>
+
+         {% if post.image %}
+          
+          <p> <img src="{{ post.image.url }}" style="
+  width: 100% ;
+  max-width: 100% ;
+"> </p>
+
+                                 {% else %}
+
+                                {% endif %}
+
+                <p class=" text-muted">Created by {{ post.Your_name }} on {{ post.pub_date}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

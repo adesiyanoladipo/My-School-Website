@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% block title %}Edit Profile{% endblock %}
+{% block body %}
+
+
+         <h2>Edit your Basic Info</h2>
+   <form method="post">
+        </center>
+{% csrf_token %}
+<div class="ada" align="left" style="padding-left: 35px;">
+    {{ form.as_p}}
+    <p>
+<br>
+<h3>Student's Info</h3>
+    {{ form2.as_p}}
+  <input style="background-color: green;" type="submit" value="Update" class="btn btn-primary"/> </center>      
+                       <p>
+                     <p> 
+       {% if form.errors %}
+                    <div class="alert alert-danger" role="alert"><h3>Please check your details and correct them</h3></div>           
+  
+                {% endif %}                  
+</form>
+</div>
+
+  
+
+{% endblock %}
+   

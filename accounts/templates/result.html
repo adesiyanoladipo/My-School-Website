@@ -1,0 +1,48 @@
+{% extends "base.html" %} 
+{% block title %}Your result{% endblock %}
+{% block body %}
+
+</center>
+<div class="container">         
+
+ <h2>Student name: {{ user.profile.name }}</h2>
+    <h3>Class: {{ user.profile.Class }}</h3>
+   <h3>Total number in class: {{ user.profile.Total_number_in_class }}</h3>
+        <h3>Number of time present and absent in school: {{user.profile.Number_of_time_present_and_absent_in_school }}</h3>
+        
+        
+        
+        
+      <h4>Results For Junior Students</h4>  
+        <h5>  Mathematics: {{ user.result.Mathematics }}
+              
+            <h5> English Language : {{user.result.English_language }}
+
+          <h5> Basic Technology : {{user.result.Basic_Tech}} </h5>
+          <h5> Business Studies : {{user.result.Business_Studies}}</h5>
+  
+              <h5> Home Economics : {{user.result.Home_Economics}}</h5>
+   
+                  <h5>Agric Science : {{user.result.Agric_Science}}</h5>
+   
+                      <h5>  Physical Education : {{user.result.Physical_Education}}</h5>
+   
+                          <h5> Yoruba : {{user.result.Yoruba}}</h5>
+    Only for JSS3 students
+    <h5>  French : {{user.result.French}}</h5>
+   
+        <h5>  Computer Science : {{user.result.Computer_Science}}</h5>
+   
+            <h5> CRK : {{user.result.CRK}}</h5>
+   
+                <h5>Fine Art : {{user.result.Fine_Art}}</h5>
+   
+                    <h5> Basic Science : {{user.result.Basic_Science}}</h5>
+   
+                        <h5> Social Studies : {{user.result.Social_Studies}}</h5>
+   
+                            <h5>  Civic Education : {{user.result.Civic_Education}}</h5>
+   
+            </div>
+{% endblock %}
+

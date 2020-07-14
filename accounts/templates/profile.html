@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block title %}{{ user.profile.name}}'s e-portal{% endblock %}
+   {% block body %}
+  {% if user.is_authenticated %} 
+  
+    <style>
+  /* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    font-size: 20px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+</style>
+   
+</center>
+<div class="container">
+
+  
+<para style="
+padding-left:'560px'">
+ <h2>Welcome {{ user.profile.name}}</h2>    
+
+
+    <h2>Profile</h2>
+    <p>Username: {{ user }}</p>
+    <p>Student's name: {{ user.profile.name}}</p>
+    <p>Age: {{ user.profile.age }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Class: {{ user.profile.Class }}</p>
+    <p>Phone Number: {{ user.profile.phone }}</p>
+    <p>Class teacher: {{  user.profile.Class_teacher }}</p>
+    <p>Admission No: {{  user.profile.Admission_No }}</p>
+    <p>Notifcations: {{  user.profile.notifcations }}</p>
+	<p>School fees status : {{ user.userprofile.School_fees_status }}</p>
+  {% if user.profile.image %}
+      <img alt="Student's picture" src="{{ user.profile.image.url }}" width='65%'height="80%">
+      <p>
+      Student's profile Picture
+      </p>
+      <p>
+        {% else %}
+        Profile photo not available
+   {% endif %}
+
+      
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: {{ user.profile.Student_Academic_Status}}em; width: {{ user.profile.Student_Academic_Status25}}%;">
+    {{ user.profile.Student_Academic_Status100}}/100
+  </div>
+</div>
+
+
+
+    Student's academic status
+    <br>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">RESULTS -></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="view-results">Check results(JSS) </a>
+
+    <p>-----------------</p>
+
+    <a href="view-resultss">Check results(SSS) </a>
+  </div>
+</div>
+
+
+    
+
+    
+      
+<p>
+
+  <a href="edit">Update your profile </a>
+  <p>
+<h4>Please,if any of your bio-data is wrong,kindly report to the school ICT team</h4>        <p>
+     
+                  <a href="logout">Log Out ({{ user.profile.name }})</a>
+
+          {% else %}
+        <title>Login to continue</title>
+           You can't access your e-portal since you are logged out,click  <a href="http://localhost:8000/login/"> here</a> to login to your account
+            	 
+            	 
+          {% endif %}
+
+        </p>
+        <script type="text/javascript">
+          /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+        </script>
+    
+</body>
+
+{% endblock %}

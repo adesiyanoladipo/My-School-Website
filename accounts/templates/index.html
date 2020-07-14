@@ -1,0 +1,39 @@
+{% extends "base2.html" %} 
+    {% load static %}
+<link rel="stylesheet" href="{% static 'accounts/index.css' %}"type="text/css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm">
+  <title> Messiah High School | Why you would love us</title>
+{% block body %}
+
+
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h3 class=" site-heading my-4 mt-3 text-white"> Messiah High School</h3>
+                   
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+        
+        {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+    <h4>2. Federal Scholarship award winner 2014 - A graduate from Messiah High School</h4>
+    <h4>3. Best student in 100 Level, FUTA(deans list)-A graduate from Messiah High School</h4>
+    <h4>4. 2015 Excellent Jamb scores</h4>
+    <p>
+    <h1>Our uniqueness:</h1>
+    <h4> • Affordability (affordable school fees)</h4>
+    <h4> • IGCSE, Cambridge O/A Level, Cambridge AICE/ICE</h4>
+    
+    </div>
+</div>
+{% endblock %}

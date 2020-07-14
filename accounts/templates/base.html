@@ -1,0 +1,488 @@
+<html lang="en">
+<head>
+{% load staticfiles %}
+
+    <link rel="stylesheet" href="{% static 'accounts/new.css' %}">
+<link rel="icon" href="https://scontent.flos1-1.fna.fbcdn.net/v/t1.0-9/fr/cp0/e15/q65/104170236_972947339843292_4321572288482582077_n.jpg?_nc_cat=108&_nc_sid=110474&efg=eyJpIjoiYiJ9&_nc_eui2=AeEcjp7UXACUMUNKCyAFdMS6uHBKf3iA0Ei4cEp_eIDQSN4T1NZVbEALJjv2w2hVV3gIPSSzQsz1Ff83hlKvJkpq&_nc_ohc=7vAzYx_41I4AX9PGBMt&_nc_ht=scontent.flos1-1.fna&_nc_tp=14&oh=ead33ef7e5da117b35efd2f57435c861&oe=5F0A2A84">
+ 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+<title> Messiah High School </title>
+
+        <style>
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+body {
+  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+}
+
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+.head_text {
+        color: white;
+    }
+    
+    .card {
+        box-shadow: 0 16px 48px #E3E7EB;
+    }
+        .shadow {
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #f00000;
+            border-color: #dc281e;
+        }
+        .masthead {
+            background: #3398E1;
+            height: auto;
+            padding-bottom: 15px;
+            box-shadow: 0 16px 48px #E3E7EB;
+            padding-top: 10px;
+        }
+
+
+
+   
+  
+ 
+
+footer {
+  background-color: #000;
+  background-position: absolute;
+  background-width: 100%;
+}
+
+
+.nav {
+    z-index: 9999;
+    width: 0%;
+    height: 60px;   
+    line-height: 60px;
+    text-align: center;
+    background-color: #2E8B57;
+}
+
+
+
+
+.nav div.main_list ul {
+    align-items: center;
+    z-index: 9999;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav div.main_list ul li {
+    z-index: 9999;
+    width: auto;
+    height: 60px;
+    padding: 0;
+    padding-left: 5rem;
+    background-height: 300px; 
+   background-color: #2E8B57; 
+}
+
+
+
+.nav div.main_list ul li a {
+    align-items: center;
+    z-index: 9999;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    line-height: 65px;
+    font-size: 2.4rem;
+
+}
+
+.nav div.main_list ul li a:hover {
+    z-index: 9999;
+    color: #00E676;
+}
+
+
+/* Home section */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(static/accounts/photo-1498550744921-75f79806b8a7.jpg);
+    background-position: center top;
+    background-size:cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    z-index: 9999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        z-index: 9999;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+        z-index: 9999;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+        z-index: 9999;
+    }
+    .nav div.main_list {
+        z-index: 9999;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        z-index: 9999;
+        height: auto;
+        display: none;
+        line-height: 20px;
+    }
+    .nav div.main_list ul {
+        z-index: 9999;
+        flex-direction: column;
+        width: 100%;
+        height: 1000vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+        
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+        line-height: 20px;
+        z-index: 9999;
+        
+    }
+    .nav div.main_list ul li a {
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 10px;
+        z-index: 9999;
+    }
+    .nav div.media_button {
+        display: block;
+        z-index: 9999;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    buttom: 10px;
+}
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+
+
+
+.myH2 {
+    text-align:center;
+    font-size: 10px;
+    text-color: white;
+}
+
+.myP {
+   
+    padding-top:15%;
+   
+}
+
+
+
+.myPa {
+    text-align: center;
+    padding-right:15%;
+    font-size: 30px;
+    text-color: white;
+}
+
+.myP4 {
+    font-size: 20px;
+    text-color: white;
+
+
+
+
+@media all and (max-width:700px){
+    .myP {
+        padding:2%;
+    }
+}
+</style>
+</head>
+
+
+
+<td><img src="https://i.imgur.com/01QeTu8.jpg" alt="Snow" style="
+  width: 130px;
+  height: 80px ;
+  padding-left: 20px">    &nbsp;
+<span style="text-shadow: 2px 2px 2px #CCCCCC; text-align:left; padding-left:0px; padding-right: 10px; padding-top:1%; font-size:30px; color: #000000; font-weight:bold; font-family:Trebuchet MS Candara, sans-serif, Geneva, Arial, Helvetica">Messiah High School<br/>
+</span>
+<span style="text-shadow: 2px 2px 2px #CCCCCC; font-style: italic; text-align:left; padding-left: 10px; font-size: 20px; color: 000000; font-weight:bold; font-family: Georgia, Times, serif;">...christ our source of wisdom</span>
+
+</td>
+
+<nav class="nav">
+
+<div class="container">
+<div id="mainListDiv" class="main_list">
+<ul class="navlinks">
+
+
+</ul>
+ </div>
+<span class="navTrigger">
+<i></i>
+<i></i>
+<i></i>
+</span>
+</div>
+</nav>
+<center>
+
+        {% block body %}
+
+        {% endblock %}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/3.4/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://getbootstrap.com/docs/3.4/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
+
